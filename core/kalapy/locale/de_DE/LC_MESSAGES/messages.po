@@ -1,0 +1,214 @@
+# German (Germany) translations for PROJECT.
+# Copyright (C) 2010 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2010-06-10 11:17+0530\n"
+"PO-Revision-Date: 2010-08-05 01:56+0530\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: de_DE <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 0.9.5\n"
+
+#: kalapy/core/pool.py:154
+#, python-format
+msgid "No such model %(name)r in package %(package)r"
+msgstr ""
+
+#: kalapy/core/pool.py:172
+#, python-format
+msgid "No such package %(name)r"
+msgstr ""
+
+#: kalapy/core/signals.py:85
+msgid "Signal handler must be a function"
+msgstr ""
+
+#: kalapy/db/fields.py:133
+#, python-format
+msgid "Field '%(name)s' is '%(value)s'; must be one of %(selection)s"
+msgstr ""
+
+#: kalapy/db/fields.py:240
+#, python-format
+msgid "%(name)r is a read-only primary key field."
+msgstr ""
+
+#: kalapy/db/fields.py:247
+#, python-format
+msgid "Field %(name)r must be a str or unicode instance, not %(type)r"
+msgstr ""
+
+#: kalapy/db/fields.py:251
+#, python-format
+msgid "Field %(name)s is %(length)d bytes long; it must be %(size)d or less."
+msgstr ""
+
+#: kalapy/db/fields.py:315
+#, python-format
+msgid "Field %(name)r must be an int or long, not a %(type)r"
+msgstr ""
+
+#: kalapy/db/fields.py:339
+#, python-format
+msgid "Invalid value: %(value)s"
+msgstr ""
+
+#: kalapy/db/fields.py:343
+#, python-format
+msgid "Field %(name)r must be a float, not a %(type)r"
+msgstr ""
+
+#: kalapy/db/fields.py:378
+#, python-format
+msgid "Invalid decimal value: %(value)s"
+msgstr ""
+
+#: kalapy/db/fields.py:382
+#, python-format
+msgid "Field %(name)s must be a decimal.Decimal value, not a %(type)r"
+msgstr ""
+
+#: kalapy/db/fields.py:413
+#, python-format
+msgid "Expected either %(true)s or %(false)s"
+msgstr ""
+
+#: kalapy/db/fields.py:468
+#, python-format
+msgid "Field %(name)r must be a datetime"
+msgstr ""
+
+#: kalapy/db/fields.py:559
+#, python-format
+msgid "Field %(name)r must be a date"
+msgstr ""
+
+#: kalapy/db/fields.py:588
+#, python-format
+msgid "Field %(name)r must be a time"
+msgstr ""
+
+#: kalapy/db/model.py:44
+#, python-format
+msgid "Attribute %(name)r is already initialized"
+msgstr ""
+
+#: kalapy/db/model.py:74
+msgid "Multiple inheritance is not supported."
+msgstr ""
+
+#: kalapy/db/model.py:152
+#, python-format
+msgid "No such field %(name)s."
+msgstr ""
+
+#: kalapy/db/model.py:167
+#, python-format
+msgid "Field %(name)r already defined in model %(model)r"
+msgstr ""
+
+#: kalapy/db/model.py:296
+msgid "You can't create instance of Model class"
+msgstr ""
+
+#: kalapy/db/model.py:448
+msgid "Can't delete, instance doesn't exists."
+msgstr ""
+
+#: kalapy/db/query.py:35
+#, python-format
+msgid "Malformed filter string: %(filter)s"
+msgstr ""
+
+#: kalapy/db/query.py:42
+#, python-format
+msgid "No such field %(name)r in model %(model)r"
+msgstr ""
+
+#: kalapy/db/query.py:278
+#, python-format
+msgid "The query returned fewer then %(num)r results"
+msgstr ""
+
+#: kalapy/db/query.py:281
+msgid "Only integer indices are supported."
+msgstr ""
+
+#: kalapy/db/reference.py:114
+#, python-format
+msgid "Recursive dependency, field %(name)r in %(model)r"
+msgstr ""
+
+#: kalapy/db/reference.py:128 kalapy/db/reference.py:464
+#: kalapy/db/reference.py:533
+#, python-format
+msgid "Field %(name)r already defined in referenced model %(model)r"
+msgstr ""
+
+#: kalapy/db/reference.py:141
+#, python-format
+msgid "ManyToOne field %(name)r value should be an instance of %(model)r"
+msgstr ""
+
+#: kalapy/db/reference.py:232
+#, python-format
+msgid "Expected %(model)r instance"
+msgstr ""
+
+#: kalapy/db/reference.py:263 kalapy/db/reference.py:346
+#, python-format
+msgid "%(model)r instances required"
+msgstr ""
+
+#: kalapy/db/reference.py:294 kalapy/db/reference.py:314
+#, python-format
+msgid "objects can't be removed from %(name)r, delete the objects instead."
+msgstr ""
+
+#: kalapy/db/reference.py:477 kalapy/db/reference.py:580
+#, python-format
+msgid "Field %(name)r is readonly."
+msgstr ""
+
+#: kalapy/db/engines/__init__.py:29
+#, python-format
+msgid "Engine %(name)r not supported."
+msgstr ""
+
+#: kalapy/db/engines/relational.py:43
+#, python-format
+msgid "Unsupported datatype %(type)r"
+msgstr ""
+
+#: kalapy/db/engines/gae/_database.py:344
+#, python-format
+msgid "column %(name)s is not unique"
+msgid_plural "columns %(name)s are not unique"
+msgstr[0] ""
+msgstr[1] ""
+
+#: kalapy/db/engines/gae/_database.py:365
+#: kalapy/db/engines/gae/_database.py:375
+#, python-format
+msgid "Key %(key)r is still referenced from table %(name)r"
+msgstr ""
+
+#: kalapy/db/engines/sqlite3/_database.py:53
+#, python-format
+msgid "Database %(name)r doesn't exist."
+msgstr ""
+
+#~ msgid "Field '%(name)s' is not defined."
+#~ msgstr ""
+
+#~ msgid "Malformed query: %(query)s"
+#~ msgstr ""
+

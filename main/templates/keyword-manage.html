@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="content-Type" content="text/html;charset=UTF-8" />
+	<title>關鍵字管理</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <style type="text/css">
+		body{
+			margin:0;
+			padding:0;
+		}
+        table {
+            border-collapse:collapse;
+            border-spacing:0;
+        }
+        tr{
+            display:block;
+        }
+        th{
+            width:80px;
+            text-align: left;
+        }
+        td{
+            text-align:center;
+        }
+        li{
+            padding:4px;
+        }
+        .even{
+            background:#8080c0;
+        }
+        .odd{
+            background:#b8da9e;
+        }
+        .even th{
+            color:#FFF;
+        }
+        td input{
+            background:#8080FF;
+            -moz-border-radius:8px;
+            -webkit-border-radius:8px;
+            border:solid 1px #400080;
+            height:20px; 
+            text-align: center;
+        }
+        td.button input{
+            background:#FFFFFF;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+	<div id="main-wraper">
+	    <h1>{{ desc }}</h1>
+	    <form action="update-keyword" method="post">
+	        <ol>
+	            {% for keyWords in mainKeyWordList %}
+	            <li class="{{ loop.cycle('odd', 'even') }}">
+        	       <table>
+            	        <input type="hidden" name="keyword_keys" value="{{ keyWords.key }}" />
+            	        <tr class="keyword">
+            	           <th>關鍵字：</th>
+            	           {% for word in keyWords.keyWordList %}
+            	           <td>
+            	                <input type="text" name="k_{{ keyWords.key }}" value="{{ word }}" />
+            	           </td>
+            	           {% endfor %}
+            	           <td>
+                                <input type="text" name="k_{{ keyWords.key }}" value="" /><td class="button"><input type="button" value="More" class="more" /></td>
+                           </td>
+            	       </tr>
+                        <tr class="answer">
+                           <th>回應：</th>
+                           {% for word in keyWords.answerList %}
+                           <td>
+                                <input type="text" name="a_{{ keyWords.key }}" value="{{ word }}" />
+                           </td>
+                           {% endfor %}
+                           <td>
+                                <input type="text" name="a_{{ keyWords.key }}" value="" /><td class="button"><input type="button" value="More" class="more" /></td>
+                           </td>
+                       </tr>
+                  </table>
+              </li>
+              {% endfor %}
+             <li class="add">
+                 <table>
+                   <input type="hidden" name="keyword_keys" value="1" />
+                   <tr class="keyword">
+                        <th>關鍵字：</th>
+                   	    <td><input type="text" name="k_1" value="" /></td><td class="button"><input type="button" value="More" class="more" /></td>
+                   </tr>
+                   <tr class="answer">
+                        <th>回應：</th>
+                        <td><input type="text" name="a_1" value="" /></td><td class="button"><input type="button" value="More" class="more" /></td>
+                   </tr>
+                	</table>
+            </li>
+         </ol>
+         <table>
+    	     <tr>
+    	         <td class="button">
+    	             <input type="button" value="More" class="more2" />
+    	         </td>
+    	         <td class="button">
+    	             <input type="submit" value="Submit" />
+    	         </td>
+    	     </tr> 
+        </table>
+    </form>
+</div>
+	<script type="text/javascript">
+	   if($('li').size()%2==0){
+	       $('li').last().addClass('even');
+	   }else{
+	       $('li').last().addClass('odd');
+	   }
+	    $('.more').live('click',function(){
+	        $(this)
+	        .parent()
+	        .prev()
+	        .clone()
+	        .insertBefore($(this).parent())
+	        .children()
+	        .val('');
+	    });
+	    $('.more2').click(function(){
+	        var total=$('.add').size();
+	        var cls=total%2==0 ? 'even' : 'odd';
+            $('ol')
+            .append('<li class="add '+cls+'"><table><input type="hidden" name="keyword_keys" value="'+total+'" /><tr class="keyword"><th>關鍵字：</th><td><input type="text" name="k_'+total+'" value="" /></td><td class="button"><input type="button" value="More" class="more" /></td></tr><tr><th>回應：</th><td><input type="text" name="a_'+total+'" value="" /></td><td class="button"><input type="button" value="More" class="more" /></td></tr><table></li>');
+            
+        });
+	</script>
+</html>

@@ -1,0 +1,106 @@
+# Settings for hello project
+
+# Name of the project
+PROJECT_NAME = 'zoe'
+
+# Version of the project
+PROJECT_VERSION = "1.0"
+
+# Enable/Disable debug mode
+DEBUG = True
+
+# Database backend engine
+# Possible value can be either sqlite3, postgresql, mysql, gae
+DATABASE_ENGINE = "gae"
+
+# Database name
+# For sqlite3 use path to the sqlite3 database file
+# For gae keep empty
+DATABASE_NAME = "" #"test_hello.db"
+
+# Database user (must have rights to create database tables)
+# Keep empty for sqlite3 and gae
+DATABASE_USER = ""
+
+# Database password
+# Keep empty for sqlite3 and gae
+DATABASE_PASSWORD = ""
+
+# Database host
+# Keep empty for sqlite3 and gae
+DATABASE_HOST =""
+
+# Database port
+# Keep empty for sqlite3 and gae
+DATABASE_PORT = ""
+
+# Database specific options
+DATABASE_OPTIONS = {
+}
+
+# Enable/Disable internationalization support
+USE_I18N = True
+
+# Default locale
+DEFAULT_LOCALE = 'en_US'
+
+# Default timezone, UTC recommended
+DEFAULT_TIMEZONE = 'UTC'
+
+# List of Middleware classes
+MIDDLEWARE_CLASSES = (
+    'kalapy.contrib.sessions.SessionMiddleware',
+)
+
+# Session storage engine (memory, memcached or database)
+SESSION_ENGINE = "memcached"
+
+# Session related options, for example memcached servers.
+#
+# For memcached engine, provide list of memcached servers.
+# If DATABASE_ENGINE is set to 'gae' this option will be ignored.
+SESSION_OPTIONS = {
+    'memcached_servers': [],
+}
+
+# Session cookie options
+SESSION_COOKIE = {
+    'name': 'session_id',
+    'age': 60 * 60 * 24 * 7 * 2,
+    'domain': None,
+    'path': '/'
+}
+
+# Settings for logging. Ignored if DATABASE_ENGINE is 'gae'.
+#
+# The level can be one of 'INFO', 'DEBUG' or 'ERROR'
+# If logfile is not provided, stderr will be assumed.
+LOGGING = {
+    'level': 'DEBUG',
+    'format': '[%(asctime)s] %(levelname)s:%(name)s:%(message)s',
+    'logfile': None,
+}
+
+# Some static links. Useful to provide favicon.ico or robots.txt. You can
+# also provide static directory links to override original static dirs. The
+# paths should be absolute path or relative to the project directory. If you
+# want to specify fallback directories, list them in tuple.
+#
+# For example::
+#
+#    STATIC_LINKS = {
+#        '/static': '/path/to/alternative/static/dir',
+#        '/favicon.ico': 'static/favicon.ico',
+#        '/foo/static': ('/path/to/foo/static1', '/path/to/foo/static2'),
+#    }
+#
+STATIC_LINKS = {
+    '/favicon.ico': 'static/favicon.ico',
+    '/robots.txt': 'static/robots.txt',
+}
+
+# List of installed packages
+INSTALLED_PACKAGES = (
+    'kalapy.contrib.sessions',
+    'main',
+)

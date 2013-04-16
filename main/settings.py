@@ -1,0 +1,24 @@
+# Settings for main package
+
+#: Name of the package.
+NAME = "main"
+
+#: Package description.
+DESCRIPTION = """
+"""
+
+#: Package version string.
+VERSION = "1.0"
+
+#: Name of the package that is extended by this package.
+#: In that case this package is considered an addon package
+#: and resources provided by this package will be served as
+#: the resources of extending package.
+EXTENDS = None
+
+#: Other packages this package depends on.
+DEPENDS = None
+
+#: Submount to be used to mount this package.
+#: For example, '/wiki', '/blog' etc.
+SUBMOUNT = None

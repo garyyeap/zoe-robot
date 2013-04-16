@@ -1,0 +1,6 @@
+#-*- coding: UTF-8 -*-
+cron:
+- description: Yo!
+  url: /run-cron-job
+  schedule: every 1 minutes
+  timezone: Asia/Taipei

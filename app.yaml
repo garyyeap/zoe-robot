@@ -1,0 +1,15 @@
+application: zoe-robot  
+version: 4
+runtime: python
+api_version: 1
+
+handlers:
+
+    - url: .*
+      script: gaehandler.py
+      secure: optional
+      
+builtins:
+    - datastore_admin: on
+    - remote_api: on
+
