@@ -6,7 +6,7 @@ A toy wrote few years ago when start learning Python, using Kalapy framework and
 
 Please be clear that:
   1. These codes are written by a newbird who not familiar with Python.
-  2. Seen Plurk updated their API to 0Auth, these codes probably not gonna work anymore. 
+  2. Seen Plurk updated their API to 0Auth, these codes probably not working anymore. 
   3. These codes did't catch up Google App Engine update, there is not guarantee that still able to work.
 
 ## License
